@@ -1,0 +1,47 @@
+body {
+    background-image: url('background.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    color: #fff;
+    text-align: center;
+    font-family: Arial, sans-serif;
+    perspective: 800px;
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    height: 100vh; /* Ensure full viewport height */
+}
+
+.container {
+    background-color: rgba(0, 0, 0, 0.8); /* Add a black background with transparency */
+    padding: 20px; /* Add padding to the container */
+    border-radius: 10px; /* Add rounded corners */
+}
+
+.rotating-text {
+    font-size: 3rem;
+    animation: wave 2s ease-in-out infinite; /* Apply the wave animation */
+    background-image: linear-gradient(to right, violet, indigo, blue, green, yellow, orange, red);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    display: inline-block; /* To control the width of the text */
+    text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.5); /* Add a shadow for the shine effect */
+}
+
+@keyframes wave {
+    0%,
+    100% {
+        transform: translateY(0); /* Start and end with no vertical displacement */
+    }
+    25% {
+        transform: translateY(-10px); /* Move text up */
+    }
+    50% {
+        transform: translateY(0); /* Back to the original position */
+    }
+    75% {
+        transform: translateY(10px); /* Move text down */
+    }
+}
