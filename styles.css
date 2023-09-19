@@ -8,40 +8,50 @@ body {
     font-family: Arial, sans-serif;
     perspective: 800px;
     display: flex;
-    justify-content: center; /* Center horizontally */
-    align-items: center; /* Center vertically */
-    height: 100vh; /* Ensure full viewport height */
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
 }
 
 .container {
-    background-color: rgba(0, 0, 0, 0.8); /* Add a black background with transparency */
-    padding: 20px; /* Add padding to the container */
-    border-radius: 10px; /* Add rounded corners */
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 20px;
+    border-radius: 10px;
+    position: relative; /* Make the container a positioning context for absolute positioning */
+}
+
+/* Style the overlay image */
+.container img {
+    position: absolute;
+    top: 0; /* Adjust the top position as needed */
+    left: 0; /* Adjust the left position as needed */
+    width: 100%; /* Set the image width to 100% of the container */
+    height: auto; /* Maintain aspect ratio */
 }
 
 .rotating-text {
     font-size: 3rem;
-    animation: wave 2s ease-in-out infinite; /* Apply the wave animation */
+    animation: wave 2s ease-in-out infinite;
     background-image: linear-gradient(to right, violet, indigo, blue, green, yellow, orange, red);
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
-    display: inline-block; /* To control the width of the text */
-    text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.5); /* Add a shadow for the shine effect */
+    display: inline-block;
+    text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.5);
 }
 
 @keyframes wave {
     0%,
     100% {
-        transform: translateY(0); /* Start and end with no vertical displacement */
+        transform: translateY(0);
     }
     25% {
-        transform: translateY(-10px); /* Move text up */
+        transform: translateY(-10px);
     }
     50% {
-        transform: translateY(0); /* Back to the original position */
+        transform: translateY(0);
     }
     75% {
-        transform: translateY(10px); /* Move text down */
+        transform: translateY(10px);
     }
 }
