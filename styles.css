@@ -20,15 +20,6 @@ body {
     position: relative; /* Make the container a positioning context for absolute positioning */
 }
 
-/* Style the overlay image */
-.container img {
-    position: absolute;
-    top: 0; /* Adjust the top position as needed */
-    left: 0; /* Adjust the left position as needed */
-    width: 100%; /* Set the image width to 100% of the container */
-    height: auto; /* Maintain aspect ratio */
-}
-
 .rotating-text {
     font-size: 3rem;
     animation: wave 2s ease-in-out infinite;
